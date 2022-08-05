@@ -54,6 +54,7 @@
     background-size: 30px;
     background-position: center;
     cursor: pointer;
+    display: none;
  }
 
 .toggle.active {

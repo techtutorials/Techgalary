@@ -2,44 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Learner Page</title>
+    <title>TechKnow</title>
+    <link rel="stylesheet" href="customstyle.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 </head>
 <body>
-    <section class="showcase">
-        <header>
-            <h2 class="logo">TechKnow</h2>
-            <div class="toggle"></div>
-        </header>
-        <video src="Video/video.mp4" muted loop autoplay></video>
-        <div class="overlay"></div>
-        <div class="text">
-            <h2> Learning </h2>
-            <h3> made easy!</h3>
-            <p>Get to know all emerging Technologies and Understand in Simple Terms!</p>
-            <a href="#">Keep Learning</a>
-        </div>
-    </section>
-
-    <div class="menu">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-<!--            <li><a href="articles.html">ALL ARTICLES</a></li>-->
-<!--            <li><a href="Category.html">CATEGORY</a></li>-->
+<section id="header">
+        <h2 class="logo">TechKnow</h2>
+        <div class="toggle"></div>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html"><i class="fa fa-home"></i> HOME</a></li>
+            <li class="active"><a href="about.html">ABOUT</a></li>
+            <li><a href="resources.html">RESOURCES</a></li>
+            <li><a href="Case Studies.html">CASE STUDIES</a></li>
+            <li><a href="Projects">PROJECTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </div>
+</section>
+<section id="home-header" class="homepage-header">
+    <video src="Video/video.mp4" muted loop autoplay></video>
+    <div class="text">
+    <h2>Learn with TechKnow</h2>
+    <p>Here you will find all information about latest trending technologies which is in demand.</p>
+    <a href="resources.html">Keep Learning</a>    
+    </div>
+</section>
+<section>
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Richmond Circle,Bangalore 560001,India</p>
+            <p><strong>Phone: </strong> +91 1234567890</p>
+            <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="copyright">
+            <p>&#169;2022, TechKnow</p>
+        </div>
+    </footer>
+</section>
 
-    <script>
-      const menuToggle = document.querySelector('.toggle');
-      const showcase = document.querySelector('.showcase');
+<!-- <footer>
+    <div class="footer-col">
+        <h3>Cloud Solutions</h3>
+        <li>AWS</li>
+        <li>AZURE</li>
+        <li>GCP</li>
+    </div>
+    <div class="footer-col">
+        <h3>About</h3>
+        <li>Experts</li> 
+        <li>Privacy Policy</li>
+        <li>Terms of Service</li>
+    </div>
+   
+    <div class="footer-col">
+        <h3>Resources</h3>
+        <li>Guides</li>
+        <li>Case Studies</li>
+        <li>Projects</li>
+    </div>
+    <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>Get updates on all upcoming workshops</p>
+        <div class="subscribe">
+            <input type="text" placeholder="Your Email Address">
+            <a href="#" class="yellow">SUBSCRIBE</a>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &#169;2022 TechTrend,All rights reserved</p>
+        <div class="pro-links">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+    </div>
 
-      menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        showcase.classList.toggle('active');
-      })
-    </script>
+</footer> -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            SecureToken: "44fcd64f-ec47-40f0-abce-6a523b6b87c2",
+            To : 'sowperl30@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New User Registration",
+            Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Phone no.: " + document.getElementById("Phone no.").value
+        }).then(
+        message => alert("Form Submitted Successfully")
+        );
+    }
+</script>
+<script>
+    $('#menu-btn').click(function(){
+            $('nav .navigation ul').addClass('active')
+        });
+    $('#menu-close').click(function(){
+        $('nav .navigation ul').removeClass('active')
+    });
+</script>
 </body>
+
 </html>
