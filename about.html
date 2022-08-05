@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechKnow</title>
+    <link rel="stylesheet" href="customstyle.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+<body>
+<section id="header">
+        <h2 class="logo">TechKnow</h2>
+        <div class="toggle"></div>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html"><i class="fa fa-home"></i> HOME</a></li>
+            <li class="active"><a href="about.html">ABOUT</a></li>
+            <div class="artbar">
+                <li><a href="Category.html">CATEGORY<i class="fas fa-caret-down"></i></a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Cloud Fundamentals</a></li>
+                            <li><a href="#">Docker</a></li>
+                            <li><a href="#">Jenkins</a></li>
+                            <li><a href="#">Kubernetes</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </div>
+            <li><a href="resources.html">RESOURCES</a></li>
+            <li><a href="Case Studies.html">CASE STUDIES</a></li>
+            <li><a href="Projects">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+</section>
+<section id="page-header" class="about-header">
+    <h2>#know us</h2>
+    <p>Get to know more about us!</p>
+</section>
+<section id="about-head" class="section-p1">
+    <img src="images/img2.jpg" alt="">
+    <div>
+        <h2> Who we are?</h2>
+        <p>Hello! I am Sowmya, I am the blogger for this page <br> I am a DevOps Engineer and have wide experience working on Cloud, DevOps<br>
+        In this website you will find a Curated information required for you to kick start your Cloud Journey, I will keep this website updated with all the latest trending technologies!</p>
+        <br><br>
+        <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%"> To know more about latest technologies in demand stay tuned to this Page! </marquee>
+    </div>
+</section>
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p> Get E-mail updates about <span>WorkShops</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+<section>
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Richmond Circle,Bangalore 560001,India</p>
+            <p><strong>Phone: </strong> +91 1234567890</p>
+            <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-linkedin"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="copyright">
+            <p>&#169;2022, TechKnow</p>
+        </div>
+    </footer>
+</section>
+<script>
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.header');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        header.classList.toggle('active');
+      })
+    </script>
+</body>
+</html>
